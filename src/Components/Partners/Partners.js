@@ -8,18 +8,18 @@ const Partners = () => {
     return (
         <div className='my-4 container'>
             <h1>Our Partners</h1>
-           <div className='d-flex my-4'>
+           <div className='row my-4'>
            <div className="col-md-3">
-               <img width="220px" className='' src={slack} alt="" />
+               <img className='w-50' src={slack} alt="" />
            </div>
            <div className="col-md-3">
-            <img width="200px" className='' src={google} alt="" />
+            <img  className='w-50' src={google} alt="" />
            </div>
            <div className="col-md-3">
-            <img width="150px" className='' src={uber} alt="" />
+            <img  className='w-50' src={uber} alt="" />
            </div>
            <div className="col-md-3">
-            <img width="150px" className='' src={netflix} alt="" />
+            <img  className='w-50' src={netflix} alt="" />
            </div>
            </div>
         </div>

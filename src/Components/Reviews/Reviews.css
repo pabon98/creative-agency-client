@@ -1,3 +1,10 @@
-#feedback{
-    color: rgb(44, 235, 44);
+.feedbacks{
+    border: 1px solid rgb(204, 204, 204);
+    font-size: 16px;
+}
+
+.circle-image{
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 50%;
+    width: 60px;
 }

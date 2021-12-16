@@ -8,7 +8,6 @@ import Home from './Components/Home/Home';
 import Registration from './Components/Registration/Registration';
 import Login from './Components/Login/Login';
 import AuthProvider from './Components/Contexts/AuthProvider';
-import Contact from './Components/Contact/Contact';
 
 function App() {
   return (
@@ -27,9 +26,6 @@ function App() {
          </Route>
          <Route path="/loginform">
           <Login></Login>
-         </Route>
-         <Route path='/contact'>
-           <Contact></Contact>
          </Route>
        </Switch>
      </Router>

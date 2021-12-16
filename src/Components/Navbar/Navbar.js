@@ -17,10 +17,10 @@ const Navbar = () => {
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse " id="navbarNav">
-      <ul class="navbar-nav d-flex justify-content-between  text-dark">
+      <ul class="navbar-nav mx-5 text-dark">
         <li class="nav-item">
         <NavLink
-                className="Nav_link text-dark me-2 decoration"
+                className="Nav_link text-dark me-3 decoration"
                 to="/home"
                 activeClassName="selected"
               >
@@ -29,8 +29,9 @@ const Navbar = () => {
         </li>
         <li class="nav-item">
         <NavLink
-                className="Nav_link text-dark me-2 decoration"
-                to="/portfolio"
+                className="Nav_link text-dark me-3 decoration"
+                to="portfolio"
+                
                 activeClassName="selected"
               >
                 Portfolio
@@ -38,7 +39,7 @@ const Navbar = () => {
         </li>
         <li class="nav-item">
         <NavLink
-                className="Nav_link text-dark me-2 decoration"
+                className="Nav_link text-dark me-3 decoration"
                 to="/team"
                 activeClassName="selected"
               >
@@ -47,7 +48,7 @@ const Navbar = () => {
         </li>
         <li class="nav-item">
         <NavLink
-                className="Nav_link text-dark me-5 decoration"
+                className="Nav_link text-dark me-3 decoration"
                 to="/contact"
                 activeClassName="selected"
               >
@@ -57,10 +58,10 @@ const Navbar = () => {
         {
             user.email&&
             <Link to="/dashboard">
-              <button className="btn btn btn-outline-danger me-3">DASHBOARD</button>
+              <button className="btn btn btn-outline-danger me-3">Dashboard</button>
             </Link>
           }
-            <li className="nav-item nav-text text-dark">Welcome :{user?.displayName}</li>
+            <li className="nav-item nav-text text-dark">Welcome: {user?.displayName}</li>
             {
              (user.photoURL && user.email) &&  <img
              src={user?.photoURL}
@@ -71,14 +72,16 @@ const Navbar = () => {
              className="pull-left img-circle login"
            />
            }
-        
-      </ul>
-      {user.email ? (
+          </ul>
+          
+        <div className='ms-auto'>
+          
+        {user.email ? (
              
              <div>
                <button
                onClick={handleLogOut}
-               className="btn btn btn-outline-danger position-absolute top-50 end-0 translate-middle-y mx-5"
+               className="btn btn btn-dark "
                type=""
                data-bs-toggle="tooltip"
                data-bs-placement="bottom"
@@ -89,7 +92,7 @@ const Navbar = () => {
            ) : (
              <NavLink to="/loginform">
                <button
-                 className="btn  btn-outline-danger position-absolute top-50 end-0 translate-middle-y mx-5"
+                 className="btn btn-dark mx-auto"
                  type=""
                  data-bs-toggle="tooltip"
                  data-bs-placement="bottom"
@@ -98,6 +101,7 @@ const Navbar = () => {
                </button>
              </NavLink>
            )}
+        </div>
            
         
        </div>
