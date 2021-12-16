@@ -1,0 +1,79 @@
+[
+    {
+      "id": 1,
+      "key": "UGUYG",
+      "name": "Web & Mobile design",
+      "visit": "https://www.pagecloud.com/blog/web-design-guide",
+      "description": "We craft stunning and amazing web UI, using a well drafted UX to fit your product",
+      "time": "24 hour",
+      "image": "https://i.ibb.co/ckZLK8G/service1.png",
+      "icon": "https://www.pngitem.com/pimgs/m/337-3371541_xray-clipart-svg-x-ray-icon-png-transparent.png",
+  
+      "facility": "modern",
+  
+      "price": "$40"
+    },
+  
+    {
+      "id": 2,
+      "key": "YTG&UYJ",
+      "name": "Graphic design",
+      "visit": "https://en.wikipedia.org/wiki/Medical_laboratory",
+      "description": "Amazing flyers, social media posts and brand representations that would make your brand stand out.",
+      "time": "24 hour",
+      "image": "https://i.ibb.co/mcYHmJt/service2.png",
+      "icon": "https://icons.iconarchive.com/icons/designbolts/seo/256/Web-Development-icon.png",
+  
+      "facility": "modern",
+  
+      "price": "$30"
+    },
+  
+    {
+      "id": 3,
+      "key": "UHUGY",
+      "name": "Web Development",
+      "visit": "https://99designs.com/blog/tips/types-of-graphic-design/",
+      "description": "Web development is the work involved in developing a website for the Internet or an intranet",
+  
+      "time": "24 hour",
+      "image": "https://i.ibb.co/64ySC0X/service3.png",
+      "icon": "https://www.seekpng.com/png/detail/347-3474881_at-forwardjump-marketing-we-focus-on-bringing-our.png",
+  
+      "facility": "modern",
+  
+      "price": "$25"
+    },
+  
+    {
+      "id": 4,
+      "key": "RESWER",
+      "name": "Content writing",
+      "visit": "https://www.thecompleteuniversityguide.co.uk/subject-guide/art-and-design",
+      "description": "Content writing is the process of planning, writing and editing web content, typically for digital marketing purposes.",
+      "time": "24 hour",
+  
+      "image": "https://i.ibb.co/x64Sd4C/service4.png",
+      "icon":"https://static.thenounproject.com/png/589974-200.png",
+  
+      "facility": "modern",
+  
+      "price": "$35"
+    },
+    {
+      "id": 5,
+      "key": "TRDRTGF",
+      "name": "Typography",
+      "visit": "https://en.wikipedia.org/wiki/Video_editing",
+      "description": "Typography is the art of arranging letters and text in a way that makes the copy legible, clear, and visually appealing to the reader.",
+      "time": "24 hour",
+      "image": "https://i.ibb.co/PZH4h8T/service5.png",
+
+      "icon": "https://cdn-icons-png.flaticon.com/512/2886/2886890.png",
+      "facility": "modern",
+  
+      "price": "$60"
+    }
+]
+  
+    
