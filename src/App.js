@@ -25,7 +25,7 @@ function App() {
          <Route path="/registration">
           <Registration></Registration>
          </Route>
-         <Route path="loginform">
+         <Route path="/loginform">
           <Login></Login>
          </Route>
          <Route path='/contact'>
