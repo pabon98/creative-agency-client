@@ -9,7 +9,7 @@ const Reviews = () => {
       .then(data=>setReviews(data))
     },[])
     return (
-        <div className="client-section  py-5" id="ourteam">
+        <div className="client-section  py-5" id="team">
            <h1 className="text-center">Clients <span className="text-success">Feedback</span></h1>
                <div className="row d-flex justify-content-around p-5">
                    {reviews.map(review=>

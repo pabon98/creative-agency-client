@@ -1,6 +1,9 @@
 .bg{
-    background-color:yellow;
+    background-color:#FFC107;
 }
 .decoration{
+    text-decoration: none;
+}
+.anchor{
     text-decoration: none;
 }

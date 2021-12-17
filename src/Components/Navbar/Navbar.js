@@ -28,32 +28,16 @@ const Navbar = () => {
               </NavLink>
         </li>
         <li class="nav-item">
-        <NavLink
-                className="Nav_link text-dark me-3 decoration"
-                to="portfolio"
-                
-                activeClassName="selected"
-              >
-                Portfolio
-              </NavLink>
+       
+              <a className='anchor text-dark me-3' href="#portfolio">Portfolio</a>
         </li>
         <li class="nav-item">
-        <NavLink
-                className="Nav_link text-dark me-3 decoration"
-                to="/team"
-                activeClassName="selected"
-              >
-                Our Team
-              </NavLink>
+       
+               <a className='anchor text-dark me-3' href="#team">Our Team</a>
         </li>
         <li class="nav-item">
-        <NavLink
-                className="Nav_link text-dark me-3 decoration"
-                to="/contact"
-                activeClassName="selected"
-              >
-                Contact Us
-              </NavLink>
+      
+               <a className='anchor text-dark me-3' href="#contact">Contact Us</a>
         </li>
         {
             user.email&&
@@ -61,7 +45,7 @@ const Navbar = () => {
               <button className="btn btn btn-outline-danger me-3">Dashboard</button>
             </Link>
           }
-            <li className="nav-item nav-text text-dark">Welcome: {user?.displayName}</li>
+            <li className="nav-item nav-text text-dark">Welcome: { user?.displayName}</li>
             {
              (user.photoURL && user.email) &&  <img
              src={user?.photoURL}

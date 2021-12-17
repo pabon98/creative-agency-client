@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div style={{backgroundColor:"yellow"}} className="">
+    <div style={{backgroundColor:"#FFC107"}} className="">
       <div className="d-flex justify-content-center align-items-center">
-      <div className="col-md-6">
+      <div className="col-md-6 my-3">
         <h1>Let’s Grow Your <br /> Brand To The <br /> Next Level</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, aliquam.</p>
         <Link to="/loginform">
