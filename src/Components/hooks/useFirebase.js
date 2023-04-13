@@ -89,7 +89,10 @@ initializeAuthentication()
       setError("");
       setName("");
       setPassword("");
-      signOut(auth).then((result) => {});
+      signOut(auth).then((result) => {
+        his.push("/");
+      });
+      
     };
     const updateDisplayName = () => {
       updateProfile(auth.currentUser, {

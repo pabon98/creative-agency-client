@@ -26,6 +26,13 @@ const Navbar = () => {
               >
                 Home
               </NavLink>
+        <NavLink
+                className="Nav_link text-dark me-3 decoration"
+                to="/explore"
+                activeClassName="selected"
+              >
+                Explore
+              </NavLink>
         </li>
         <li class="nav-item">
        
@@ -45,7 +52,8 @@ const Navbar = () => {
               <button className="btn btn btn-outline-danger me-3">Dashboard</button>
             </Link>
           }
-            <li className="nav-item nav-text text-dark">Welcome: { user?.displayName}</li>
+            <li className="nav-item nav-text text-dark"> {user?.displayName}</li>
+            {/* {<button className='nav-item nav-text text-dark'> { user?.displayName} </button>} */}
             {
              (user.photoURL && user.email) &&  <img
              src={user?.photoURL}
@@ -72,6 +80,7 @@ const Navbar = () => {
              >
                Logout
              </button>
+             
              </div>
            ) : (
              <NavLink to="/loginform">

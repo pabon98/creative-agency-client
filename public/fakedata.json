@@ -5,13 +5,10 @@
       "name": "Web & Mobile design",
       "visit": "https://www.pagecloud.com/blog/web-design-guide",
       "description": "We craft stunning and amazing web UI, using a well drafted UX to fit your product",
-      "time": "24 hour",
+      "time": "4 months",
       "image": "https://i.ibb.co/ckZLK8G/service1.png",
-      "icon": "https://www.pngitem.com/pimgs/m/337-3371541_xray-clipart-svg-x-ray-icon-png-transparent.png",
+      "price":"35$"
   
-      "facility": "modern",
-  
-      "price": "$40"
     },
   
     {
@@ -20,13 +17,9 @@
       "name": "Graphic design",
       "visit": "https://en.wikipedia.org/wiki/Medical_laboratory",
       "description": "Amazing flyers, social media posts and brand representations that would make your brand stand out.",
-      "time": "24 hour",
+      "time": "3 months",
       "image": "https://i.ibb.co/mcYHmJt/service2.png",
-      "icon": "https://icons.iconarchive.com/icons/designbolts/seo/256/Web-Development-icon.png",
-  
-      "facility": "modern",
-  
-      "price": "$30"
+      "price":"28$"
     },
   
     {
@@ -35,14 +28,9 @@
       "name": "Web Development",
       "visit": "https://99designs.com/blog/tips/types-of-graphic-design/",
       "description": "Web development is the work involved in developing a website for the Internet or an intranet",
-  
-      "time": "24 hour",
+      "time": "6 months",
       "image": "https://i.ibb.co/64ySC0X/service3.png",
-      "icon": "https://www.seekpng.com/png/detail/347-3474881_at-forwardjump-marketing-we-focus-on-bringing-our.png",
-  
-      "facility": "modern",
-  
-      "price": "$25"
+      "price":"40$"
     },
   
     {
@@ -51,14 +39,10 @@
       "name": "Content writing",
       "visit": "https://www.thecompleteuniversityguide.co.uk/subject-guide/art-and-design",
       "description": "Content writing is the process of planning, writing and editing web content, typically for digital marketing purposes.",
-      "time": "24 hour",
+      "time": "2 months",
   
       "image": "https://i.ibb.co/x64Sd4C/service4.png",
-      "icon":"https://static.thenounproject.com/png/589974-200.png",
-  
-      "facility": "modern",
-  
-      "price": "$35"
+      "price":"15$"
     },
     {
       "id": 5,
@@ -66,14 +50,53 @@
       "name": "Typography",
       "visit": "https://en.wikipedia.org/wiki/Video_editing",
       "description": "Typography is the art of arranging letters and text in a way that makes the copy legible, clear, and visually appealing to the reader.",
-      "time": "24 hour",
+      "Duration": "1 month",
       "image": "https://i.ibb.co/PZH4h8T/service5.png",
-
-      "icon": "https://cdn-icons-png.flaticon.com/512/2886/2886890.png",
-      "facility": "modern",
+      "price":"10$"
+    },
+    {
+      "id": 6,
+      "key": "ABPSH",
+      "name": "Abode Photoshop",
+      "visit": "https://www.agitraining.com/design-news/photoshop-training-news/what-photoshop",
+      "description": "Adobe Photoshop is a software application for image editing and photo retouching for use on Windows or MacOS computers. ",
+      "duration": "3 months",
+      "image": "https://i.ibb.co/HHCxK17/service6.png",
+      "price":"30$"
+     
+    },
+    {
+      "id": 7,
+      "key": "DMTG",
+      "name": "Digital Marketting",
+      "visit": "https://www.agitraining.com/design-news/photoshop-training-news/what-photoshop",
+      "description": "Digital marketing, also called online marketing, is the promotion of brands to connect with potential customers using the internet and other forms of digital communication.",
+      "image": "https://i.ibb.co/sV8Sdyr/service7.png",
+      "price":"25$"
   
-      "price": "$60"
+    },
+    {
+      "id": 8,
+      "key": "UYDGB",
+      "name": "Video Editing",
+      "visit": "https://en.wikipedia.org/wiki/Video_editing",
+      "description": "Video editing is the process of editing segments of motion video production footage, special effects and sound recordings in the post-production process.",
+      "duration": "2 months",
+      "image": "https://i.ibb.co/4wbb8cW/service8.png",
+      "price":"15$"
+  
+    },
+    {
+      "id": 9,
+      "key": "ARTD",
+      "name": "Art & Design ",
+      "visit": "https://www.thecompleteuniversityguide.co.uk/subject-guide/art-and-design",
+      "description": "An Art & Design degree includes creating expressive artwork and the implementation of industry-changing designs.",
+      "duration":"2 months",
+      "image": "https://i.ibb.co/TH9WXz6/service9.png",
+      "price": "20$"
     }
+
 ]
   
     
