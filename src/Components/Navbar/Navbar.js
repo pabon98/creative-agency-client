@@ -40,7 +40,13 @@ const Navbar = () => {
         </li>
         <li class="nav-item">
        
-               <a className='anchor text-dark me-3' href="#team">Our Team</a>
+        <NavLink
+                className="Nav_link text-dark me-3 decoration"
+                to="/team"
+                activeClassName="selected"
+              >
+                Our Team
+              </NavLink>
         </li>
         <li class="nav-item">
       
@@ -74,7 +80,7 @@ const Navbar = () => {
                <button
                onClick={handleLogOut}
                className="btn btn btn-dark "
-               type=""
+               type="button"
                data-bs-toggle="tooltip"
                data-bs-placement="bottom"
              >
@@ -86,7 +92,7 @@ const Navbar = () => {
              <NavLink to="/loginform">
                <button
                  className="btn btn-dark mx-auto"
-                 type=""
+                 type="button"
                  data-bs-toggle="tooltip"
                  data-bs-placement="bottom"
                >

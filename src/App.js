@@ -12,6 +12,7 @@ import Explore from './Components/Explore/Explore';
 import PlaceOrder from './Components/PlaceOrder/PlaceOrder';
 import Dashboard from './Components/Dashboard/Dashboard';
 import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
+import Teams from './Components/Teams/Teams';
 
 function App() {
   return (
@@ -20,25 +21,28 @@ function App() {
      <Router>
        <Switch>
          <Route exact path="/">
-         <Home></Home>
+         <Home/>
          </Route>
          <Route path="/home">
-         <Home></Home>
+         <Home/>
          </Route>
          <PrivateRoute path="/explore">
-          <Explore></Explore>
+          <Explore/>
          </PrivateRoute>
+         <Route path="/team">
+          <Teams/>
+         </Route>
          <Route path="/dashboard">
-          <Dashboard></Dashboard>
+          <Dashboard/>
          </Route>
          <PrivateRoute path="/placeOrder/:serviceId">
-         <PlaceOrder></PlaceOrder>
+         <PlaceOrder/>
          </PrivateRoute>
          <Route path="/registration">
-          <Registration></Registration>
+          <Registration/>
          </Route>
          <Route path="/loginform">
-          <Login></Login>
+          <Login/>
          </Route>
        </Switch>
      </Router>
