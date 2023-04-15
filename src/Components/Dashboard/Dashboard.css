@@ -2,6 +2,9 @@
 .row.content {
     height: 480px;
   }
+  li{
+    list-style-type: none;
+  }
   
   /* Set gray background color and 100% height */
   .sidenav {

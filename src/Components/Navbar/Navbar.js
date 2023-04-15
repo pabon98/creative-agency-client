@@ -55,10 +55,10 @@ const Navbar = () => {
         {
             user.email&&
             <Link to="/dashboard">
-              <button className="btn btn btn-outline-danger me-3">Dashboard</button>
+              <p className='ms-2 text-dark'>Dashboard</p>
             </Link>
           }
-            <li className="nav-item nav-text text-dark"> {user?.displayName}</li>
+            <li className="nav-item nav-text text-dark mx-4"> {user?.displayName}</li>
             {/* {<button className='nav-item nav-text text-dark'> { user?.displayName} </button>} */}
             {
              (user.photoURL && user.email) &&  <img

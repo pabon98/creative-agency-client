@@ -16,6 +16,7 @@ const Dashboard = () => {
   const { user } = useAuth();
   // let history = useHistory()
   const [isAdmin, setIsAdmin] = useState(false);
+
   useEffect(() => {
     fetch(`http://localhost:5000/checkAdmin/${user?.email}`)
       .then((res) => res.json())
@@ -66,7 +67,6 @@ const Dashboard = () => {
                   <NavLink to="/dashboard/manageProducts">
                     <span className="text-white">Manage Products</span>
                   </NavLink>
-                  
                 </div>
               ) : (
                 <div className="mt-4">
@@ -85,7 +85,6 @@ const Dashboard = () => {
                   <NavLink to="/dashboard/myOrders">
                     <span className="text-white">My Orders</span>
                   </NavLink>
-                 
                 </div>
               )}
             </div>
@@ -96,19 +95,23 @@ const Dashboard = () => {
               <div class="container-fluid">
                 {/* <span class="navbar-brand mb-0 h1">Navbar</span> */}
                 {isAdmin ? (
-              <h3 className="text-dark">Admin Panel</h3>
-            ) : (
-              <h3 className="text-dark">User Panel</h3>
-            )}
+                  <h3 className="text-dark">Admin Panel</h3>
+                ) : (
+                  <h3 className="text-dark">User Panel</h3>
+                )}
+
+                <div></div>
+
                 <div className="d-flex">
-                  {
-                    user.email ? <h5>{`Hello, ${user?.displayName}`}</h5>:
-                    <NavLink to='/loginform' className="mb-0 h5 text-dark ">Login</NavLink>
-                  }
-                 
+                  {user.email ? (
+                    <h5>{`Hello, ${user?.displayName}`}</h5>
+                  ) : (
+                    <NavLink to="/loginform" className="mb-0 h5 text-dark ">
+                      Login
+                    </NavLink>
+                  )}
                 </div>
               </div>
-              
             </nav>
 
             <Switch>
