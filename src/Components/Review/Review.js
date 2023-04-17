@@ -7,7 +7,7 @@ const Review = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/review', data)
+        axios.post('https://creative-agency-server-9jtj.onrender.com/review', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Review added successfully');

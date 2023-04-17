@@ -18,7 +18,7 @@ const Dashboard = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/checkAdmin/${user?.email}`)
+    fetch(`https://creative-agency-server-9jtj.onrender.com/checkAdmin/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         if (data[0]?.role === "admin") {

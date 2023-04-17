@@ -5,7 +5,7 @@ const MakeAdmin = () => {
     const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/makeAdmin", {
+    fetch("https://creative-agency-server-9jtj.onrender.com/makeAdmin", {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

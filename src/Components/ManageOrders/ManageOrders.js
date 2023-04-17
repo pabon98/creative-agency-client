@@ -10,7 +10,7 @@ const ManageOrders = () => {
 
     useEffect(() => {
       
-        const url = `http://localhost:5000/orders`;
+        const url = `https://creative-agency-server-9jtj.onrender.com/orders`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -25,7 +25,7 @@ const ManageOrders = () => {
         updatedorder.status = 'Shipped';
 
         
-        const url = `http://localhost:5000/approve/${id}`;
+        const url = `https://creative-agency-server-9jtj.onrender.com/approve/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -49,7 +49,7 @@ const ManageOrders = () => {
         console.log(id);
         const proceed = window.confirm('Are you sure, you want to cancel the order?')
         if (proceed) {
-            const url = `http://localhost:5000/deleteOrder/${id}`
+            const url = `https://creative-agency-server-9jtj.onrender.com/deleteOrder/${id}`
             
             fetch(url, {
                 method: 'DELETE'

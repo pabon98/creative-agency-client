@@ -9,7 +9,7 @@ import Navbar from "../Navbar/Navbar";
 const Explore = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/services')
+    fetch('https://creative-agency-server-9jtj.onrender.com/services')
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

@@ -11,7 +11,7 @@ const MyOrders = () => {
     const { user } = useAuth();
 
     useEffect(() => {
-        const url = `http://localhost:5000/myOrders/${user?.email}`;
+        const url = `https://creative-agency-server-9jtj.onrender.com/myOrders/${user?.email}`;
        
         fetch(url)
             .then(res => res.json())
@@ -19,7 +19,7 @@ const MyOrders = () => {
     }, [user.email])
 
     useEffect(() => {
-        const url = `http://localhost:5000/services`;
+        const url = `https://creative-agency-server-9jtj.onrender.com/services`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -45,12 +45,13 @@ const MyOrders = () => {
         setFound(found);
         setLoading(false);
     }, [services, myOrders])
+    
     //Canceling Order
     const handleCancelOrder = (id) => {
         // console.log(id);
         const proceed = window.confirm('Are you sure, you want to cancel the order?')
         if (proceed) {
-            const url = `http://localhost:5000/deleteOrder/${id}`;
+            const url = `https://creative-agency-server-9jtj.onrender.com/deleteOrder/${id}`;
             
             fetch(url, {
                 method: 'DELETE'

@@ -8,7 +8,7 @@ const ManageProducts = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const url = `http://localhost:5000/services`;
+        const url = `https://creative-agency-server-9jtj.onrender.com/services`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -22,7 +22,7 @@ const ManageProducts = () => {
         console.log(id);
         const proceed = window.confirm('Are you sure, you want to delete the product?')
         if (proceed) {
-            const url = `http://localhost:5000/deleteProduct/${id}`
+            const url = `https://creative-agency-server-9jtj.onrender.com/deleteProduct/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

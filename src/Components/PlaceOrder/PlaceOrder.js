@@ -19,7 +19,7 @@ const PlaceOrder = () => {
         data.order = services._id;
         data.status = 'pending';
 
-        const url = `http://localhost:5000/placeOrder`;
+        const url = `https://creative-agency-server-9jtj.onrender.com/placeOrder`;
        
         fetch(url, {
             method: 'POST',
@@ -38,7 +38,7 @@ const PlaceOrder = () => {
     };
 
     useEffect(() => {
-        const url = `http://localhost:5000/services/${serviceId}`;
+        const url = `https://creative-agency-server-9jtj.onrender.com/services/${serviceId}`;
         
         fetch(url)
             .then(res => res.json())
