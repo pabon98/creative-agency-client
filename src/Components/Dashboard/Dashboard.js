@@ -11,11 +11,13 @@ import Review from "../Review/Review";
 import "./Dashboard.css";
 import useAuth from "../hooks/useAuth";
 import Pay from "../Payment/Pay";
+import { useParams } from "react-router-dom";
 
 const Dashboard = () => {
   const { user } = useAuth();
   // let history = useHistory()
   const [isAdmin, setIsAdmin] = useState(false);
+  const {orderId} = useParams()
 
   useEffect(() => {
     fetch(`https://creative-agency-server-9jtj.onrender.com/checkAdmin/${user?.email}`)
@@ -29,6 +31,7 @@ const Dashboard = () => {
       });
   }, [user?.email]);
   // console.log(isAdmin);
+
   return (
     <div>
       {/* <Navbar></Navbar> */}
@@ -75,9 +78,9 @@ const Dashboard = () => {
                   </NavLink>
                   <br /> <br />
                   <NavLink to="/dashboard/pay">
-                    <span className="text-white">Payment</span>
+                    <span className="text-white">Pay</span>
                   </NavLink>
-                  <br /> <br />
+                  <br /><br />
                   <NavLink to="/dashboard/review">
                     <span className="text-white">Review</span>
                   </NavLink>

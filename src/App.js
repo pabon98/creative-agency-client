@@ -13,6 +13,8 @@ import PlaceOrder from './Components/PlaceOrder/PlaceOrder';
 import Dashboard from './Components/Dashboard/Dashboard';
 import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 import Teams from './Components/Teams/Teams';
+import Pay from './Components/Payment/Pay';
+
 
 function App() {
   return (
@@ -34,6 +36,11 @@ function App() {
          </Route>
          <Route path="/dashboard">
           <Dashboard/>
+         </Route>
+         <Route path="/dashboard/pay/:orderId">
+          <Dashboard>
+          <Pay/>
+          </Dashboard>     
          </Route>
          <PrivateRoute path="/placeOrder/:serviceId">
          <PlaceOrder/>
