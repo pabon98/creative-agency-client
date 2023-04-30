@@ -6,8 +6,6 @@ import ManageOrders from "../ManageOrders/ManageOrders";
 import ManageProducts from "../ManageProducts/ManageProducts";
 import MyOrders from "../MyOrders/MyOrders";
 import Review from "../Review/Review";
-// import Pay from '../Pay/Pay';
-
 import "./Dashboard.css";
 import useAuth from "../hooks/useAuth";
 import Pay from "../Payment/Pay";

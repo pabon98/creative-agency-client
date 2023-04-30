@@ -104,7 +104,7 @@ initializeAuthentication()
   
   
     const hanldeUserInfoRegister = (email) => {
-      fetch("https://murmuring-castle-14767.herokuapp.com/addUserInfo", {
+      fetch("https://creative-agency-server-9jtj.onrender.com/addUserInfo", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ email }),

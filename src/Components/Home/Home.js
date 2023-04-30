@@ -3,7 +3,7 @@ import Banner from '../Banner/Banner';
 import Navbar from '../Navbar/Navbar';
 import Partners from '../Partners/Partners';
 import Services from '../Services/Services';
-import Portfolio from '../Portfolio/portfolio'
+import Portfolio from '../Portfolio/portfolio';
 import Reviews from '../Reviews/Reviews';
 import Contact from '../Contact/Contact';
 
