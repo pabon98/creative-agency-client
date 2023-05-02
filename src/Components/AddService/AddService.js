@@ -17,12 +17,13 @@ const AddService = () => {
             })
     }
     return (
-        <div className="add-car">
+        <div className="add-service">
         <h2 className='text-center'>Add New Service</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
-            <input {...register("title", { required: true, maxLength: 20 })} placeholder="Name" />
+            <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
             <textarea {...register("description")} placeholder="Description" />
-            <input type="number" {...register("price")} placeholder="price" />
+            <input type="text" {...register("price", { pattern: /^[0-9]+(\.[0-9]{1,2})?$/ })} placeholder="price" />
+
             <input {...register("image")} placeholder="image url" />
             <input className='btn btn-dark' type="submit" />
         </form>

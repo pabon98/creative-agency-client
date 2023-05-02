@@ -31,14 +31,6 @@ const MakeAdmin = () => {
             aria-describedby="inputGroup-sizing-default"
           />
         </div>
-        {/* <input
-          className="input-field"
-          name="email"
-          placeholder="Email"
-          type="email"
-          {...register("email", { required: true })}
-        /> */}
-
         <input
           className="submit-btn btn btn-outline-dark px-2 mt-2"
           type="submit"
