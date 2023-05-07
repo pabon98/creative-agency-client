@@ -7,20 +7,20 @@ import airbnb from '../../images/logos/airbnb.png'
 
 const Partners = () => {
     return (
-        <div className='my-4 container'>
+        <div className='my-5 container'>
             <h1>Our Partners</h1>
            <div className='row my-4'>
            <div className="col-md-2">
                <img className='w-75' src={slack} alt="" />
            </div>
            <div className="col-md-2">
-            <img  className='w-75' src={google} alt="" />
+            <img  className='w-75 mt-3 my-sm-0' src={google} alt="" />
            </div>
            <div className="col-md-2">
-            <img  className='w-75' src={uber} alt="" />
+            <img  className='w-50' src={uber} alt="" />
            </div>
            <div className="col-md-2">
-            <img  className='w-75' src={netflix} alt="" />
+            <img  className='w-50' src={netflix} alt="" />
            </div>
            <div className="col-md-2">
             <img  className='w-75' src={airbnb} alt="" />
