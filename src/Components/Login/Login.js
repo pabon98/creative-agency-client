@@ -3,10 +3,11 @@ import "./Login.css";
 import Input from "../Input/Input";
 import { Container } from "react-bootstrap";
 import { Link, Redirect, } from "react-router-dom";
-import { useLocation, useHistory } from "react-router";
+import { useLocation, useHistory } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import { useEffect } from "react";
 
 
 const Login = () => {
@@ -17,18 +18,37 @@ const Login = () => {
     setPassword,
     error,
     user,
-    setUser, setError
+    setUser, setError, email, password
   } = useAuth();
 
-  const notify = () => toast(" Successfully Login!!", {
-    position: "top-center",
-    autoClose: 2000,
-  });
+  // const notify = () => toast(" Successfully Login!!", {
+  //   position: "top-center",
+  //   autoClose: 2000,
+  // });
   const handleClick =()=>{
+
     signInusingEmailPassword()
-    notify()
+    // notify()
+
+     //validation check
+     if( email && password){
+      setError('')
+      toast.success('Successfully Login!!', {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    } else{
+      setError("Please fill out all fields");
+    }
 
   }
+  useEffect(() => {
+    if (error) {
+      const errorTimer = setTimeout(() => {
+        setError('');
+      }, 2000);
+      return () => clearTimeout(errorTimer);
+    }
+  }, [setError, error]);
   const history = useHistory();
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -68,7 +88,7 @@ const Login = () => {
                 label="Enter Email"
                 name="username"
                 value=""
-                type="text"
+                type="email"
                 placeholder="Enter your username"
                 required
               />
