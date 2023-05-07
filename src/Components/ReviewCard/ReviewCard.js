@@ -4,6 +4,8 @@ import './ReviewCard.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import 'swiper/css';
+import 'swiper/css/navigation';
+
 const ReviewCard = ({reviews}) => {
     // const {imageUrl, title, comments, rating } = reviews;
 
