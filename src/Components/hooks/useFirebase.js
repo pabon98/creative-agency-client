@@ -22,7 +22,7 @@ const useFirebase = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [reload, setReload] = useState(false)
+
 
   let his = useHistory();
   const auth = getAuth();
@@ -91,7 +91,6 @@ const useFirebase = () => {
   }
   const handleLogOut = () => {
     setIsLoading(true);
-    setReload(false)
     setUser({});
     setError("");
     setName("");
@@ -128,17 +127,19 @@ const useFirebase = () => {
     handleGoogleSignIn,
     handleLogOut,
     RegisterWithEmail,
+    email,
     setEmail,
+    password,
     setPassword,
     setName,
     user,
+    setUser,
     error,
+    setError,
     signInusingEmailPassword,
     name,
     historychange,
     isLoading,
-    reload,
-    setReload
   };
 };
 
