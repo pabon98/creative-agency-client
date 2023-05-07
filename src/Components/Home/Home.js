@@ -7,8 +7,8 @@ import Portfolio from '../Portfolio/portfolio';
 import Reviews from '../Reviews/Reviews';
 import Contact from '../Contact/Contact';
 
-
 const Home = () => {
+    
     return (
         <div>
          <Navbar></Navbar>
@@ -18,8 +18,6 @@ const Home = () => {
          <Portfolio></Portfolio>
          <Reviews></Reviews>
          <Contact></Contact>
-         
-
         </div>
     );
 };

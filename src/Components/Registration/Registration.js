@@ -5,25 +5,32 @@ import Button from "../Button/Button";
 import { Container } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
 import useFirebase from "../hooks/useFirebase";
-
-
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Registration = () => {
-  const {error,  RegisterWithEmail, setEmail, setPassword,setName,user } =
-    useFirebase();
+  const { error, RegisterWithEmail, setEmail, setPassword, setName, user,  } = useFirebase();
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-   const handleEmail = (e) => {
-     setEmail(e.target.value);
-   };
-   const handlePassword = (e) => {
-     setPassword(e.target.value);
-   };
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
   const handleName = (e) => {
-     
-     setName(e.target.value);
-   };
+    setName(e.target.value);
+  };
+
+  const notify = () => toast(" Successfully Registered!!", {
+    position: "top-center",
+    autoClose: 2000,
+  });
+  const handleClick = () => {
+    RegisterWithEmail();
+    notify();
+  };
   return (
     <Container>
       <div className="registrationFormMainDiv">
@@ -63,11 +70,16 @@ const Registration = () => {
             <small className="m-2">{error}</small>
             <div className="mb-3">
               <Button
-                onClick={RegisterWithEmail}
+                onClick={handleClick}
                 btnClass="btn-primary fs-5 w-100"
                 name="Registration"
                 type="submit"
               />
+              <ToastContainer
+              position="top-center"
+              autoClose= {2000}
+              />
+
             </div>
             {user.email && <Redirect to="/"></Redirect>}
             <div className="text-center">

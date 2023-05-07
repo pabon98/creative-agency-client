@@ -22,9 +22,12 @@ const useFirebase = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [reload, setReload] = useState(false)
+
   let his = useHistory();
   const auth = getAuth();
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -48,6 +51,7 @@ const useFirebase = () => {
     }
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
+        
         console.log(result);
         hanldeUserInfoRegister(result.user.email)
         setUser(result.user);
@@ -56,6 +60,7 @@ const useFirebase = () => {
         signInusingEmailPassword();
         verifyEmail();
         setError("");
+        
       })
       .catch((error) => {
         if ("Firebase: Error (auth/email-already-in-use)." === error.message)
@@ -86,6 +91,7 @@ const useFirebase = () => {
   }
   const handleLogOut = () => {
     setIsLoading(true);
+    setReload(false)
     setUser({});
     setError("");
     setName("");
@@ -95,8 +101,12 @@ const useFirebase = () => {
   const updateDisplayName = () => {
     updateProfile(auth.currentUser, {
       displayName: name,
+      
     })
-      .then(() => {})
+      .then((result) => {
+        // setUser(result.user);
+        // setName(user.name);
+      })
       .catch((error) => {});
   };
 
@@ -127,6 +137,8 @@ const useFirebase = () => {
     name,
     historychange,
     isLoading,
+    reload,
+    setReload
   };
 };
 

@@ -5,6 +5,8 @@ import { Container } from "react-bootstrap";
 import { Link, Redirect, } from "react-router-dom";
 import { useLocation, useHistory } from "react-router";
 import useAuth from "../hooks/useAuth";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
@@ -17,6 +19,16 @@ const Login = () => {
     user,
     setUser, setError
   } = useAuth();
+
+  const notify = () => toast(" Successfully Login!!", {
+    position: "top-center",
+    autoClose: 2000,
+  });
+  const handleClick =()=>{
+    signInusingEmailPassword()
+    notify()
+
+  }
   const history = useHistory();
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -75,10 +87,14 @@ const Login = () => {
                 {user.email && <Redirect to="/"></Redirect>}
                 <button
                   className="btn btn-primary fs-5 w-100 bold "
-                  onClick={signInusingEmailPassword}
+                  onClick={handleClick}
                 >
                   Login
                 </button>
+                <ToastContainer
+              position="top-center"
+              autoClose= {2000}
+              />
               </div>
               <div className="mb-3">
                 <button
@@ -88,6 +104,7 @@ const Login = () => {
                   <i className="fab fa-google" />
                   Login With Google
                 </button>
+               
               </div>
 
               <div className="text-center">
