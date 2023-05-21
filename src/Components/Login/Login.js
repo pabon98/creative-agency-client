@@ -21,10 +21,6 @@ const Login = () => {
     setUser, setError, email, password
   } = useAuth();
 
-  // const notify = () => toast(" Successfully Login!!", {
-  //   position: "top-center",
-  //   autoClose: 2000,
-  // });
   const handleClick =()=>{
 
     signInusingEmailPassword()
@@ -106,7 +102,7 @@ const Login = () => {
               <div className="mb-1">
                 {user.email && <Redirect to="/"></Redirect>}
                 <button
-                  className="btn btn-primary fs-5 w-100 bold "
+                  className="btn btn-primary fs-5 w-100 bold"
                   onClick={handleClick}
                 >
                   Login
@@ -118,10 +114,10 @@ const Login = () => {
               </div>
               <div className="mb-3">
                 <button
-                  className="btn btn-success fs-5 w-100 bold "
+                  className="btn btn-success fs-5 w-100 bold"
                   onClick={handleGoogleSignInRedirect}
                 >
-                  <i className="fab fa-google" />
+                  <i className="fab fa-google"/>
                   Login With Google
                 </button>
                

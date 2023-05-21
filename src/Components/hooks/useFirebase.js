@@ -13,16 +13,13 @@ import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import initializeAuthentication from "../Firebase/Firebase.init";
 
-
-
-initializeAuthentication()
+initializeAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
 
   let his = useHistory();
   const auth = getAuth();
@@ -41,8 +38,7 @@ const useFirebase = () => {
   const handleGoogleSignIn = () => {
     setIsLoading(true);
     const googleProvider = new GoogleAuthProvider();
-   return signInWithPopup(auth, googleProvider)
-    
+    return signInWithPopup(auth, googleProvider);
   };
   const RegisterWithEmail = () => {
     if (password.length < 6) {
@@ -51,16 +47,15 @@ const useFirebase = () => {
     }
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        
         console.log(result);
-        hanldeUserInfoRegister(result.user.email)
+        hanldeUserInfoRegister(result.user.email);
         setUser(result.user);
         setName(user.name);
         updateDisplayName();
         signInusingEmailPassword();
         verifyEmail();
         setError("");
-        
+        // his.push("/");
       })
       .catch((error) => {
         if ("Firebase: Error (auth/email-already-in-use)." === error.message)
@@ -72,23 +67,22 @@ const useFirebase = () => {
   };
 
   const signInusingEmailPassword = () => {
-    
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
+        console.log(result);
         setUser(result.user);
         setError("");
-        
       })
       .catch((error) => {
         if ("Firebase: Error (auth/wrong-password)." === error.message)
           setError("Email/Password is incorrect!");
         // else setError(error.message);
       });
-   
   };
- const historychange = () =>{
-    his.push("/");
-  }
+  
+  // const historychange = () => {
+  //   his.push("/");
+  // };
   const handleLogOut = () => {
     setIsLoading(true);
     setUser({});
@@ -100,7 +94,6 @@ const useFirebase = () => {
   const updateDisplayName = () => {
     updateProfile(auth.currentUser, {
       displayName: name,
-      
     })
       .then((result) => {
         // setUser(result.user);
@@ -108,7 +101,6 @@ const useFirebase = () => {
       })
       .catch((error) => {});
   };
-
 
   const hanldeUserInfoRegister = (email) => {
     fetch("https://creative-agency-server-9jtj.onrender.com/addUserInfo", {
@@ -119,9 +111,6 @@ const useFirebase = () => {
       .then((res) => res.json())
       .then((result) => console.log(result));
   };
-
-
-
 
   return {
     handleGoogleSignIn,
@@ -138,7 +127,7 @@ const useFirebase = () => {
     setError,
     signInusingEmailPassword,
     name,
-    historychange,
+    // historychange,
     isLoading,
   };
 };

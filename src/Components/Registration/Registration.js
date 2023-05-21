@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Registration.css";
 import Input from "../Input/Input";
-import Button from "../Button/Button";
+// import Button from "../Button/Button";
 import { Container } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
 import useFirebase from "../hooks/useFirebase";
@@ -24,12 +24,12 @@ const Registration = () => {
     setName(e.target.value);
   };
   const handleImage = (e) => {
-    setUser((prevUser) => ({ ...prevUser, image: e.target.files[0] }));
+    setUser((prevUser) => ({ ...prevUser, image: e.target.files[0]}));
   };
 
   const handleClick = () => {
     RegisterWithEmail();
-
+    <Redirect to="/"></Redirect>
     //validation check
     if(user && name && email && password){
       setError('')
@@ -98,12 +98,12 @@ const Registration = () => {
             />
             <small className="m-2 text-danger">{error}</small>
             <div className="mb-3">
-              <Button
+              <button
                 onClick={handleClick}
-                btnClass="btn-primary fs-5 w-100"
+                className="btn btn-success fs-5 w-100"
                 name="Registration"
                 type="submit"
-              />
+              >Registration</button>
               <ToastContainer
               position="top-center"
               autoClose= {2000}

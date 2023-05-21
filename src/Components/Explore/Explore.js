@@ -25,11 +25,11 @@ const Explore = () => {
         {
           products.map(product=>(
             <div className="col-md-4 my-2" key={product._id}>
-              <div class="card" style={{ width: "18rem" }} >
-            <img height="200px" src={product.image} class="card-img-top w-75 ms-auto me-auto" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">{product.name}</h5>
-              <p class="card-text">
+              <div className="card" style={{ width: "18rem" }} >
+            <img height="200px" src={product.image} className="card-img-top w-75 ms-auto me-auto" alt="..." />
+            <div className="card-body">
+              <h5 className="card-title">{product.name}</h5>
+              <p className="card-text">
                {product.description.slice(0,120)}
               </p>
               <h6>Price: {product.price}</h6>

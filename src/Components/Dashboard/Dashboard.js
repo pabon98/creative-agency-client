@@ -9,19 +9,17 @@ import Review from "../Review/Review";
 import "./Dashboard.css";
 import useAuth from "../hooks/useAuth";
 import Pay from "../Payment/Pay";
-import { useParams } from "react-router-dom";
 
 const Dashboard = () => {
   const { user } = useAuth();
   // let history = useHistory()
   const [isAdmin, setIsAdmin] = useState(false);
-  const {orderId} = useParams()
 
   useEffect(() => {
     fetch(`https://creative-agency-server-9jtj.onrender.com/checkAdmin/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
-        if (data[0]?.role === "admin") {
+        if (data[0]?.role === "admin"){
           setIsAdmin(true);
         } else {
           setIsAdmin(false);
@@ -33,9 +31,9 @@ const Dashboard = () => {
   return (
     <div>
       {/* <Navbar></Navbar> */}
-      <div class="container-fluid text-center">
-        <div class="row content">
-          <div class="col-sm-2 sidenav">
+      <div className="container-fluid text-center">
+        <div className="row content">
+          <div className="col-sm-2 sidenav">
             {isAdmin ? (
               <h3 className="text-white">Admin Dashboard</h3>
             ) : (
@@ -90,11 +88,11 @@ const Dashboard = () => {
               )}
             </div>
           </div>
-          <div class="col-sm-10 ">
+          <div className="col-sm-10 ">
             {/* Dashboard Navbar */}
-            <nav class="navbar bg-body-tertiary">
-              <div class="container-fluid">
-                {/* <span class="navbar-brand mb-0 h1">Navbar</span> */}
+            <nav className="navbar bg-body-tertiary">
+              <div className="container-fluid">
+                {/* <span className="navbar-brand mb-0 h1">Navbar</span> */}
                 {isAdmin ? (
                   <h3 className="text-dark">Admin Panel</h3>
                 ) : (

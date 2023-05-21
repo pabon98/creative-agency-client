@@ -14,7 +14,8 @@ const Services = () => {
             <h1>Provide Awesome <span className='text-success'>Services </span></h1>
             <div className="row mt-5">
                 {
-                    services.slice(0,3).map(service=><Service
+                    services.slice(0,3).map((service, index)=><Service
+                    key={index}
                     service={service}
                     >
                     </Service>)

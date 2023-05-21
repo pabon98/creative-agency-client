@@ -20,13 +20,13 @@ const MakeAdmin = () => {
     <div>
       <h1 className="mb-3">Add New admin</h1>
       <form id="form-reset" onSubmit={handleSubmit(onSubmit)}>
-        <div class="input-group w-25 mx-auto mb-2">
+        <div className="input-group w-25 mx-auto mb-2">
           <input
             type="email"
             name="email"
             placeholder="Email"
             {...register("email", { required: true })}
-            class="form-control"
+            className="form-control"
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default"
           />
